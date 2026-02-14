@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<title>Zaštićena stranica</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  /* Password popup modal */
+  #password-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+
+  #password-box {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    min-width: 300px;
+  }
+
+  #password-box h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  #username,
+  #password {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+
+  #submitBtn {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  #submitBtn:hover {
+    background-color: #0056b3;
+  }
+
+  #error {
+    color: red;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+
+  /* Content area - hidden initially */
+  #protected-content {
+    display: none;
+    width: 100%;
+    height: 100vh;
+  }
+
+  #protected-content iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+</style>
+</head>
+<body>
+
+<!-- PASSWORD MODAL -->
+<div id="password-modal">
+  <div id="password-box">
+    <h2>Unesite korisničko ime i lozinku</h2>
+    <input type="text" id="username" placeholder="Username" autocomplete="username" autofocus>
+    <input type="password" id="password" placeholder="Password" autocomplete="current-password">
+    <button id="submitBtn">Potvrdi</button>
+    <p id="error"></p>
+  </div>
+</div>
+
+<!-- PRAZAN KONTEJNER ZA IFRAME -->
+<div id="protected-content"></div>
+
+<script src="script.js"></script>
+</body>
+</html>

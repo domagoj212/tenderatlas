@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Power BI Embed Test</title>
+    <script src="https://cdn.jsdelivr.net/npm/powerbi-client@2.21.0/dist/powerbi.min.js"></script>
+</head>
+<body>
+    <!-- Plain tekst za test -->
+    <h1>Test HTML Radi!</h1>
+    <p>Ako vidiš ovaj tekst, Live Server radi ispravno.</p>
+
+    <hr>
+
+    <!-- Power BI div -->
+    <h2>Embedded Power BI Report (ako backend radi)</h2>
+    <div id="reportContainer" style="height:600px;width:100%;border:1px solid #ccc;"></div>
+
+    <script>
+        async function embedReport() {
+            try {
+                // Poziv backend endpointa
+                const response = await fetch('https://backendAuth.azurewebsites.net/get-embed-token');
+                const data = await response.json();
+
+                // Konfiguracija za embed
+                const embedConfig = {
+                    type: 'report',
+                    id: data.reportId,
+                    embedUrl: data.embedUrl,
+                    accessToken: data.embedToken,
+                    tokenType: window['powerbi-client'].models.TokenType.Embed,
+                    settings: {
+                        panes: {
+                            filters: { visible: false },
+                            pageNavigation: { visible: true }
+                        }
+                    }
+                };
+
+                const reportContainer = document.getElementById('reportContainer');
+                powerbi.embed(reportContainer, embedConfig);
+
+            } catch (err) {
+                console.error("Error embedding report:", err);
+                document.getElementById('reportContainer').innerHTML =
+                    "<p style='color:red'>Greška: " + err + "</p>";
+            }
+        }
+
+        // Pokreni embed kad se stranica učita
+        embedReport();
+    </script>
+</body>
+</html>
