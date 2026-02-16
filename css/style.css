@@ -69,12 +69,14 @@ html.lenis, html.lenis body {
   top: 0;
   left: 0;
   height: 3px;
-  width: 0%;
+  width: 100%;
   background: linear-gradient(90deg, var(--pacific-cyan), var(--aquamarine));
   z-index: 10000;
-  transition: width 0.1s linear;
   box-shadow: 0 0 8px rgba(56, 134, 151, 0.6);
   pointer-events: none;
+  will-change: transform;
+  transform-origin: left;
+  transform: scaleX(0);
 }
 
 html, body {
@@ -196,6 +198,9 @@ body::before {
   pointer-events: none;
   z-index: 0;
   animation: orbFloat 20s ease-in-out infinite;
+  will-change: transform;
+  contain: layout style;
+  backface-visibility: hidden;
 }
 
 .glow-orb-1 {

@@ -36,8 +36,8 @@
 ## 📅 Za napraviti ovaj tjedan
 
 1. **Google Search Console**
-   - Dodaj https://javna.eu
-   - Submitaj sitemap: https://javna.eu/sitemap.xml
+   - Dodaj https://tenderatlas.hr
+   - Submitaj sitemap: https://tenderatlas.hr/sitemap.xml
    - Verifikuj vlasništvo (HTML tag metoda)
 
 2. **Google Analytics 4**

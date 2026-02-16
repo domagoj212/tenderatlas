@@ -5,7 +5,12 @@ const translations = {
     "nav.solution": "Naše rješenje",
     "nav.pricing": "Moduli i pretplate",
     "nav.contact": "Kontaktiraj nas",
+    "nav.home": "Početna",
     "nav.users": "Registrirani korisnici",
+    
+    // Terms Page
+    "terms.title": "Opći uvjeti korištenja",
+    "terms.version": "Verzija 1.1 | Vrijedi od 09.02.2026.g.",
     
     // Hero Section
     "hero.title": "TenderAtlas",
@@ -113,6 +118,8 @@ const translations = {
     "modal.cancel": "Možda kasnije",
     
     // Footer
+    "footer.contact": "Kontakt",
+    "footer.terms": "Opći Uvjeti Korištenja",
     "footer.text": "© 2026 | Sva prava zadržana | Svi podaci prikazani na ovoj stranici su informativnog karaktera"
   },
   en: {
@@ -120,7 +127,12 @@ const translations = {
     "nav.solution": "Our Solution",
     "nav.pricing": "Modules & Pricing",
     "nav.contact": "Contact Us",
+    "nav.home": "Home",
     "nav.users": "Registered Users",
+    
+    // Terms Page
+    "terms.title": "Terms of Use",
+    "terms.version": "Version 1.1 | Effective from February 9, 2026",
     
     // Hero Section
     "hero.title": "TenderAtlas",
@@ -222,6 +234,8 @@ const translations = {
     "modal.cancel": "Maybe Later",
     
     // Footer
+    "footer.contact": "Contact",
+    "footer.terms": "Terms of Use",
     "footer.text": "© 2026 | All rights reserved | All data shown on this page is for informational purposes"
   }
 };

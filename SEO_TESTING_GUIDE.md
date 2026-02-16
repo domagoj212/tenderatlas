@@ -4,7 +4,7 @@
 
 ### Google's Rich Results Test
 1. Idi na: https://search.google.com/test/rich-results
-2. Unesi: https://javna.eu
+2. Unesi: https://tenderatlas.hr
 3. Provjeri:
    - ✅ Organization schema
    - ✅ WebSite schema  
@@ -18,7 +18,7 @@
 
 ### Facebook Sharing Debugger
 1. Idi na: https://developers.facebook.com/tools/debug/
-2. Unesi: https://javna.eu
+2. Unesi: https://tenderatlas.hr
 3. Klikni "Scrape Again"
 4. Provjeri:
    - og:title - "Analitika Javne Nabave i Vizualizacija..."
@@ -28,13 +28,13 @@
 
 ### Twitter Card Validator
 1. Idi na: https://cards-dev.twitter.com/validator
-2. Unesi: https://javna.eu
+2. Unesi: https://tenderatlas.hr
 3. Provjeri preview kako će Twitter prikazati
 
 ## 2. SEO On-Page Check
 
 ### Lighthouse Audit (Chrome DevTools)
-1. Otvori https://javna.eu u Chrome
+1. Otvori https://tenderatlas.hr u Chrome
 2. F12 → Lighthouse tab
 3. Odaberi "SEO" + "Performance" + "Accessibility"
 4. Run audit
@@ -51,7 +51,7 @@ Desni klik → View Page Source, provjeri:
 ✅ <meta name="keywords" content="javna nabava hrvatska...
 ✅ <meta name="language" content="Croatian">
 ✅ <meta name="geo.region" content="HR">
-✅ <link rel="canonical" href="https://javna.eu/">
+✅ <link rel="canonical" href="https://tenderatlas.hr/">
 ```
 
 ### Heading struktura
@@ -73,7 +73,7 @@ Otvori stranicu, Ctrl+F:
 
 ### Online Tool
 1. Idi na: https://www.seocentro.com/tools/search-engines/keyword-density.html
-2. Unesi URL: https://javna.eu
+2. Unesi URL: https://tenderatlas.hr
 3. Provjeri density:
    - Glavni keywords: 1-3%
    - Sekundarni: 0.5-1.5%
@@ -83,7 +83,7 @@ Otvori stranicu, Ctrl+F:
 
 ### Google Mobile-Friendly Test
 1. https://search.google.com/test/mobile-friendly
-2. Unesi: https://javna.eu
+2. Unesi: https://tenderatlas.hr
 3. Mora biti ✅ "Page is mobile friendly"
 
 ### Responsive Design Test
@@ -102,7 +102,7 @@ Otvori stranicu, Ctrl+F:
 
 ### Google PageSpeed Insights
 1. https://pagespeed.web.dev/
-2. Unesi: https://javna.eu
+2. Unesi: https://tenderatlas.hr
 3. Provjeri OBJE verzije:
    - Mobile (target: 85+)
    - Desktop (target: 95+)
@@ -122,7 +122,7 @@ Otvori stranicu, Ctrl+F:
 ## 6. Sitemap i Robots Test
 
 ### Sitemap provjera
-1. Otvori: https://javna.eu/sitemap.xml
+1. Otvori: https://tenderatlas.hr/sitemap.xml
 2. Provjeri:
    - Valid XML format
    - Svi linkovi funkcioniraju
@@ -130,7 +130,7 @@ Otvori stranicu, Ctrl+F:
    - Priority values su logični
 
 ### Robots.txt provjera
-1. Otvori: https://javna.eu/robots.txt
+1. Otvori: https://tenderatlas.hr/robots.txt
 2. Provjeri:
    - User-agent: *
    - Allow: /
@@ -158,7 +158,7 @@ Otvori stranicu, Ctrl+F:
 
 ### Dead Link Checker
 1. https://www.deadlinkchecker.com/
-2. Unesi: https://javna.eu
+2. Unesi: https://tenderatlas.hr
 3. Provjeri da nema broken links
 4. Ispravi sve 404 greške
 
@@ -192,7 +192,7 @@ Provjeri da svi anchor linkovi rade:
 
 1. **Dodaj property**
    - Idi na: https://search.google.com/search-console
-   - Add property: https://javna.eu
+   - Add property: https://tenderatlas.hr
    - Verify ownership (HTML tag metoda preporučena)
 
 2. **Submit sitemap**
@@ -201,7 +201,7 @@ Provjeri da svi anchor linkovi rade:
    - Submit
 
 3. **URL Inspection**
-   - Test live URL: https://javna.eu
+   - Test live URL: https://tenderatlas.hr
    - Request indexing
 
 4. **Provjeri nakon 24-48h**
@@ -212,10 +212,10 @@ Provjeri da svi anchor linkovi rade:
 ## 11. Bing Webmaster Tools
 
 1. https://www.bing.com/webmasters
-2. Add site: https://javna.eu
+2. Add site: https://tenderatlas.hr
 3. Verify ownership
-4. Submit sitemap: https://javna.eu/sitemap.xml
-5. Submit URL: https://javna.eu
+4. Submit sitemap: https://tenderatlas.hr/sitemap.xml
+5. Submit URL: https://tenderatlas.hr
 
 ## 12. Search Appearance Test
 
@@ -224,7 +224,7 @@ Provjeri da svi anchor linkovi rade:
 **Desktop SERP preview:**
 ```
 Analitika Javne Nabave Hrvatska | Podaci Javnih Natj...
-https://javna.eu
+https://tenderatlas.hr
 Platforma za analitiku javne nabave u Hrvatskoj. Vizualizacija 
 podataka javnih natječaja, tržišta javne nabave i javnih naručitelja. 
 Pregled ugovora...
@@ -234,7 +234,7 @@ Pregled ugovora...
 ```
 Analitika Javne Nabave 
 Hrvatska | Podaci...
-javna.eu
+tenderatlas.hr
 Platforma za analitiku javne 
 nabave u Hrvatskoj. Vizualizacija 
 podataka javnih natječaja...
@@ -243,7 +243,7 @@ podataka javnih natječaja...
 ### Provjeri:
 - ✅ Title nije predugi (< 60 znakova)
 - ✅ Description nije preduga (< 160 znakova)  
-- ✅ URL je clean (https://javna.eu)
+- ✅ URL je clean (https://tenderatlas.hr)
 - ✅ Ključne riječi su u title i description
 
 ## 13. Competitive Analysis

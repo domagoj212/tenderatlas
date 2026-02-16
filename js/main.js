@@ -41,27 +41,14 @@ function initSmoothScroll() {
 /* ===== PROXIMITY SCROLL SNAP ===== */
 function initScrollSnap() {
   const NAV_HEIGHT = 70;
-  const SNAP_ZONE = 80;   // px — only snap when this close to a section edge
-  const IDLE_MS = 80;     // ms — react quickly after scroll stops
+  const SNAP_ZONE = 80;
+  const IDLE_MS = 120;
   let idleTimer = null;
   let isSnapping = false;
-  let lastScroll = 0;
-  let velocity = 0;
-  let velTimer = null;
 
   function getSections() {
     return Array.from(document.querySelectorAll('section:not([style*="display:none"]):not([style*="display: none"])'));
   }
-
-  // Track scroll velocity so we don't snap while user has momentum
-  window.addEventListener('scroll', () => {
-    const now = performance.now();
-    const dt = now - (velTimer || now);
-    const dy = Math.abs(window.scrollY - lastScroll);
-    velocity = dt > 0 ? dy / dt : 0; // px per ms
-    lastScroll = window.scrollY;
-    velTimer = now;
-  }, { passive: true });
 
   function nearestSection() {
     const scrollY = window.scrollY;
@@ -75,31 +62,26 @@ function initScrollSnap() {
       if (d < minDist) { minDist = d; closest = top; }
     });
 
-    // Also consider page top (hero)
     if (scrollY < minDist) { minDist = scrollY; closest = 0; }
-
     return { target: closest, dist: minDist };
   }
 
   function trySnap() {
     if (isSnapping) return;
-    if (velocity > 0.3) return; // still has momentum, skip
-
     const { target, dist } = nearestSection();
-    if (dist < 2 || dist > SNAP_ZONE) return; // already there or too far
+    if (dist < 2 || dist > SNAP_ZONE) return;
 
-    // Scale duration by distance — short nudge = fast, bigger = slightly longer
-    const dur = 0.25 + (dist / SNAP_ZONE) * 0.2; // 0.25s – 0.45s
-
+    const dur = 0.3 + (dist / SNAP_ZONE) * 0.2;
     isSnapping = true;
     lenis.scrollTo(target, {
       duration: dur,
-      easing: (t) => 1 - Math.pow(1 - t, 2), // simple ease-out quad
+      easing: (t) => 1 - Math.pow(1 - t, 2),
       onComplete: () => { isSnapping = false; }
     });
     setTimeout(() => { isSnapping = false; }, 700);
   }
 
+  // Single scroll listener for snap
   window.addEventListener('scroll', () => {
     if (isSnapping) return;
     clearTimeout(idleTimer);
@@ -107,102 +89,111 @@ function initScrollSnap() {
   }, { passive: true });
 }
 
-/* ===== SCROLL REVEAL ANIMATION (enhanced with stagger depth) ===== */
+/* ===== SCROLL REVEAL ANIMATION ===== */
 function initScrollReveal() {
   const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
-  
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
+      if (entry.isIntersecting) entry.target.classList.add('visible');
     });
-  }, {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-  });
-
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
   revealElements.forEach(el => observer.observe(el));
 }
 
-/* ===== SCROLL-DRIVEN PARALLAX (multiple layers) ===== */
-function initScrollParallax() {
-  const parallaxElements = document.querySelectorAll('[data-parallax]');
+/* ===== UNIFIED SCROLL-DRIVEN EFFECTS ===== */
+/* Single rAF loop handles: hero parallax, orb parallax, headings, nav, progress bar, back-to-top */
+function initScrollEffects() {
   const heroLogo = document.querySelector('.hero-logo');
   const heroSubtitle = document.querySelector('.hero p');
   const heroCta = document.querySelector('.hero .cta');
   const sectionHeadings = document.querySelectorAll('section h2');
+  const parallaxEls = document.querySelectorAll('[data-parallax]');
+  const orbs = document.querySelectorAll('.glow-orb');
+  const nav = document.querySelector('.fixed-nav');
+  const backToTopBtn = document.getElementById('backToTop');
+  const vh = window.innerHeight;
+  let navScrolled = false;
+  let backToTopVisible = false;
+
+  // Create progress bar
+  const progressBar = document.createElement('div');
+  progressBar.className = 'scroll-progress';
+  document.body.appendChild(progressBar);
 
   let ticking = false;
 
   window.addEventListener('scroll', () => {
-    if (!ticking) {
-      requestAnimationFrame(() => {
-        const scrollY = window.scrollY;
-        const vh = window.innerHeight;
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      const scrollY = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - vh;
 
-        // Hero content parallax fade-out on scroll
+      // --- Progress bar (use scaleX for GPU compositing) ---
+      const progress = docHeight > 0 ? scrollY / docHeight : 0;
+      progressBar.style.transform = `scaleX(${progress})`;
+
+      // --- Nav background ---
+      const shouldScroll = scrollY > 80;
+      if (shouldScroll !== navScrolled) {
+        navScrolled = shouldScroll;
+        if (nav) nav.classList.toggle('scrolled', shouldScroll);
+      }
+
+      // --- Back to top button ---
+      if (backToTopBtn) {
+        const shouldShow = scrollY > vh * 0.8;
+        if (shouldShow !== backToTopVisible) {
+          backToTopVisible = shouldShow;
+          backToTopBtn.classList.toggle('visible', shouldShow);
+        }
+      }
+
+      // --- Hero parallax (only while in hero zone) ---
+      if (scrollY < vh * 1.2) {
+        const heroProgress = Math.min(scrollY / (vh * 0.6), 1);
         if (heroLogo) {
-          const heroProgress = Math.min(scrollY / (vh * 0.6), 1);
-          heroLogo.style.transform = `translateY(${scrollY * 0.25}px) scale(${1 - heroProgress * 0.1})`;
+          heroLogo.style.transform = `translate3d(0,${scrollY * 0.25}px,0) scale(${1 - heroProgress * 0.1})`;
           heroLogo.style.opacity = 1 - heroProgress * 0.8;
         }
         if (heroSubtitle) {
-          const heroProgress = Math.min(scrollY / (vh * 0.6), 1);
-          heroSubtitle.style.transform = `translateY(${scrollY * 0.15}px)`;
+          heroSubtitle.style.transform = `translate3d(0,${scrollY * 0.15}px,0)`;
           heroSubtitle.style.opacity = 1 - heroProgress * 0.8;
         }
         if (heroCta) {
-          const heroProgress = Math.min(scrollY / (vh * 0.6), 1);
-          heroCta.style.transform = `translateY(${scrollY * 0.1}px)`;
+          heroCta.style.transform = `translate3d(0,${scrollY * 0.1}px,0)`;
           heroCta.style.opacity = 1 - heroProgress * 0.9;
         }
 
-        // Section headings subtle parallax
-        sectionHeadings.forEach(h => {
-          const rect = h.getBoundingClientRect();
-          if (rect.top < vh && rect.bottom > 0) {
-            const progress = (vh - rect.top) / (vh + rect.height);
-            h.style.transform = `translateY(${(0.5 - progress) * -15}px)`;
-          }
+        // Orb parallax (only near hero)
+        orbs.forEach((orb, i) => {
+          const speed = 0.03 + (i * 0.015);
+          orb.style.transform = `translate3d(0,${scrollY * speed}px,0)`;
         });
+      }
 
-        // Custom parallax elements
-        parallaxElements.forEach(el => {
-          const speed = parseFloat(el.dataset.parallax) || 0.1;
-          const rect = el.getBoundingClientRect();
-          if (rect.top < vh && rect.bottom > 0) {
-            const center = rect.top + rect.height / 2 - vh / 2;
-            el.style.transform = `translateY(${center * speed}px)`;
-          }
-        });
-
-        ticking = false;
-      });
-      ticking = true;
-    }
-  });
-}
-
-/* ===== NAV SCROLL EFFECT ===== */
-function initNavScroll() {
-  const nav = document.querySelector('.fixed-nav');
-  if (!nav) return;
-
-  let ticking = false;
-  window.addEventListener('scroll', () => {
-    if (!ticking) {
-      window.requestAnimationFrame(() => {
-        if (window.scrollY > 80) {
-          nav.classList.add('scrolled');
-        } else {
-          nav.classList.remove('scrolled');
+      // --- Section headings subtle float ---
+      sectionHeadings.forEach(h => {
+        const rect = h.getBoundingClientRect();
+        if (rect.top < vh && rect.bottom > 0) {
+          const p = (vh - rect.top) / (vh + rect.height);
+          h.style.transform = `translate3d(0,${(0.5 - p) * -15}px,0)`;
         }
-        ticking = false;
       });
-      ticking = true;
-    }
-  });
+
+      // --- Custom parallax elements ---
+      parallaxEls.forEach(el => {
+        const speed = parseFloat(el.dataset.parallax) || 0.1;
+        const rect = el.getBoundingClientRect();
+        if (rect.top < vh && rect.bottom > 0) {
+          const center = rect.top + rect.height / 2 - vh / 2;
+          el.style.transform = `translate3d(0,${center * speed}px,0)`;
+        }
+      });
+
+      ticking = false;
+    });
+  }, { passive: true });
 }
 
 /* ===== ANIMATED STAT COUNTERS ===== */
@@ -256,41 +247,6 @@ function animateCounter(el, target, suffix) {
   }
   
   requestAnimationFrame(update);
-}
-
-/* ===== SMOOTH PARALLAX FOR GLOW ORBS ===== */
-function initParallax() {
-  const orbs = document.querySelectorAll('.glow-orb');
-  if (!orbs.length) return;
-
-  let ticking = false;
-  window.addEventListener('scroll', () => {
-    if (!ticking) {
-      window.requestAnimationFrame(() => {
-        const scrollY = window.scrollY;
-        orbs.forEach((orb, i) => {
-          const speed = 0.03 + (i * 0.015);
-          orb.style.transform = `translateY(${scrollY * speed}px)`;
-        });
-        ticking = false;
-      });
-      ticking = true;
-    }
-  });
-}
-
-/* ===== SCROLL PROGRESS BAR ===== */
-function initScrollProgress() {
-  const bar = document.createElement('div');
-  bar.className = 'scroll-progress';
-  document.body.appendChild(bar);
-
-  window.addEventListener('scroll', () => {
-    const scrollTop = window.scrollY;
-    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-    bar.style.width = progress + '%';
-  });
 }
 
 /* ===== SECTION ACTIVE TRACKING (smart nav highlights) ===== */
@@ -410,11 +366,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initSmoothScroll();
   initScrollSnap();
   initScrollReveal();
-  initNavScroll();
+  initScrollEffects();   // unified: nav, parallax, orbs, progress bar, back-to-top
   initCounters();
-  initParallax();
-  initScrollParallax();
-  initScrollProgress();
   initActiveSection();
   initHamburger();
   initBackToTop();
@@ -613,19 +566,10 @@ function initHamburger() {
   });
 }
 
-/* ===== BACK TO TOP ===== */
+/* ===== BACK TO TOP (click only — visibility handled in initScrollEffects) ===== */
 function initBackToTop() {
   const btn = document.getElementById('backToTop');
   if (!btn) return;
-
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > window.innerHeight * 0.8) {
-      btn.classList.add('visible');
-    } else {
-      btn.classList.remove('visible');
-    }
-  }, { passive: true });
-
   btn.addEventListener('click', () => {
     if (typeof lenis !== 'undefined') {
       lenis.scrollTo(0, { duration: 1.2 });

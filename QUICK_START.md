@@ -49,25 +49,25 @@ git push origin main
 
 ### 1. Google Search Console (5 min)
 1. https://search.google.com/search-console
-2. Add property → https://javna.eu
+2. Add property → https://tenderatlas.hr
 3. Verify (HTML tag metoda):
    - Copy meta tag
    - Dodaj u <head> index.html
    - Push again
    - Verify
-4. Submit sitemap: https://javna.eu/sitemap.xml
+4. Submit sitemap: https://tenderatlas.hr/sitemap.xml
 
 ### 2. Test validaciju (3 min)
 1. Rich Results: https://search.google.com/test/rich-results
-   - Unesi: https://javna.eu
+   - Unesi: https://tenderatlas.hr
    - Provjeri da nema errors
 2. Facebook Debugger: https://developers.facebook.com/tools/debug/
-   - Unesi: https://javna.eu
+   - Unesi: https://tenderatlas.hr
    - Scrape Again
 
 ### 3. PageSpeed test (2 min)
 1. https://pagespeed.web.dev/
-2. Unesi: https://javna.eu
+2. Unesi: https://tenderatlas.hr
 3. Ciljevi:
    - Mobile: 80+
    - Desktop: 90+
@@ -108,7 +108,7 @@ git push origin main
    ✅ Analitika tržišta javne nabave
    ✅ Pregled javnih naručitelja
    
-   https://javna.eu"
+   https://tenderatlas.hr"
 
 2. Use hashtags:
    #JavnaNabava #PublicProcurement #Croatia #BusinessIntelligence #Analytics
@@ -121,7 +121,7 @@ Launching: Croatia's Public Procurement Analytics Platform 🇭🇷
 📈 Market analytics
 🎯 Tender tracking
 
-Try it: https://javna.eu
+Try it: https://tenderatlas.hr
 
 #javnanabava #croatia #publicprocurement
 ```
