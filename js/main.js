@@ -32,6 +32,20 @@ function initSmoothScroll() {
       const target = document.querySelector(targetId);
       if (target) {
         e.preventDefault();
+
+        // If mobile menu is open, close it first
+        const navLinksEl = document.getElementById('navLinks');
+        const hamburgerBtn = document.getElementById('hamburger');
+        const overlay = document.querySelector('.nav-overlay');
+        if (navLinksEl && navLinksEl.classList.contains('open')) {
+          navLinksEl.classList.remove('open');
+          if (hamburgerBtn) { hamburgerBtn.classList.remove('active'); hamburgerBtn.setAttribute('aria-expanded', 'false'); }
+          if (overlay) overlay.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+
+        // Ensure Lenis is running before scrolling
+        if (lenis) lenis.start();
         lenis.scrollTo(target, { offset: -70, duration: 1.4 });
       }
     });

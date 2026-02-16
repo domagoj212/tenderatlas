@@ -16,29 +16,22 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://tenderatlas.hr/opci-uvjeti.html">
   <style>
-    .terms {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 0 20px;
-      text-align: justify;
-      line-height: 1.8;
+    /* Terms page overrides */
+    .terms-hero {
+      height: auto !important;
+      min-height: 30vh !important;
+      padding: 120px 20px 40px !important;
     }
-    .terms h2 {
-      text-align: left;
-      font-size: 1.15em;
-      margin: 40px 0 16px;
+    .terms-hero h1 {
+      font-size: 2em;
+      margin-bottom: 10px;
     }
-    .terms p {
-      margin: 0 0 14px;
-      text-align: justify;
-    }
-    .terms ul {
-      margin: 0 0 14px 20px;
-      padding-left: 20px;
-    }
-    .terms li {
-      margin-bottom: 6px;
-      text-align: justify;
+    .terms-hero p {
+      font-size: 1.05em !important;
+      font-weight: 600;
+      max-width: none !important;
+      opacity: 1 !important;
+      animation: none !important;
     }
   </style>
 </head>
@@ -68,13 +61,13 @@
     </div>
   </nav>
 
-  <section class="hero" style="height: auto; min-height: 40vh; padding: 120px 20px 60px;">
+  <section class="hero terms-hero">
     <h1 data-i18n="terms.title">Opći uvjeti korištenja</h1>
-    <p style="font-size: 1.1em; font-weight: 600;" data-i18n="terms.version">Verzija 1.1 | Vrijedi od 09.02.2026.g.</p>
+    <p data-i18n="terms.version">Verzija 1.1 | Vrijedi od 09.02.2026.g.</p>
   </section>
 
-  <section class="container" style="padding: 60px 20px;">
-    <div class="terms" id="terms-hr">
+  <div class="terms-wrap" style="max-width:800px;margin:0 auto;padding:40px 20px 60px;text-align:left;">
+    <div id="terms-hr">
 
       <p>Pružatelj omogućuje Korisnicima pristup internetskoj platformi za pregled, vizualizaciju i analitiku podataka i informacija o javnim nabavama, uključujući sve povezane podatke. Pristup Usluzi ostvaruje se putem web stranica TenderAtlas.hr, app.tenderatlas.hr i svih ostalih povezanih web stranica na domeni TenderAtlas.hr i app.tenderatlas.hr.</p>
 
@@ -370,11 +363,11 @@
 
       <p>17.3. Pružatelj zadržava pravo izmjene ovih Uvjeta. O izmjenama je Pružatelj dužan obavijestiti Korisnika putem elektroničke pošte ili obavijesti unutar Usluge najmanje petnaest (15) kalendarskih dana prije stupanja na snagu. Nastavak korištenja Usluge nakon stupanja izmjena na snagu smatra se bezuvjetnim prihvaćanjem izmijenjenih Uvjeta. Korisnik koji ne prihvaća izmjene ima pravo pisanim putem otkazati pretplatu prije stupanja izmjena na snagu, čime pretplatnički odnos prestaje danom stupanja izmjena na snagu, uz pravo na razmjerni povrat za neiskorišteni dio pretplatnog razdoblja sukladno ovim Uvjetima.</p>
 
-      <p style="margin-top: 50px; text-align: center;"><strong>Kontakt:</strong> info@kti.hr | TenderAtlas.hr</p>
+      <p class="terms-contact"><strong>Kontakt:</strong> info@kti.hr | TenderAtlas.hr</p>
 
     </div>
 
-    <div class="terms" id="terms-en" style="display:none;">
+    <div id="terms-en" style="display:none;">
 
       <p>The Provider enables Users to access an online platform for viewing, visualization and analytics of data and information about public procurement, including all related data. Access to the Service is provided through the websites TenderAtlas.hr, app.tenderatlas.hr and all other related websites on the TenderAtlas.hr and app.tenderatlas.hr domains.</p>
 
@@ -670,17 +663,22 @@
 
       <p>17.3. The Provider reserves the right to amend these Terms. The Provider is obliged to notify the User of amendments via email or notification within the Service at least fifteen (15) calendar days before the amendments take effect. Continued use of the Service after the amendments take effect is considered unconditional acceptance of the amended Terms. A User who does not accept the amendments has the right to cancel the subscription in writing before the amendments take effect, whereby the subscription relationship terminates on the date the amendments take effect, with the right to a proportional refund for the unused part of the subscription period in accordance with these Terms.</p>
 
-      <p style="margin-top: 50px; text-align: center;"><strong>Contact:</strong> info@kti.hr | TenderAtlas.hr</p>
+      <p class="terms-contact"><strong>Contact:</strong> info@kti.hr | TenderAtlas.hr</p>
 
     </div>
-  </section>
+  </div>
 
-  <footer style="text-align: center; padding: 40px 20px; background: rgba(8, 65, 92, 0.5); color: var(--text-dimmed); border-top: 1px solid rgba(56, 134, 151, 0.2); width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; display: block;">
-    <div style="display: flex; justify-content: center; gap: 30px; margin-bottom: 20px; flex-wrap: wrap;">
-      <a href="index.html#kontakt" style="color: var(--text-muted); text-decoration: none;" data-i18n="footer.contact">Kontakt</a>
-      <a href="uvjeti.html" style="color: var(--text-muted); text-decoration: none;" data-i18n="footer.terms">Opći Uvjeti Korištenja</a>
+  <footer class="site-footer" style="margin-top: 40px;">
+    <div class="footer-inner" style="justify-content: center;">
+      <div class="footer-center">
+        <a href="index.html#kontakt" data-i18n="footer.contact">Kontakt</a>
+        <a href="opci-uvjeti.html" data-i18n="footer.terms">Opći Uvjeti Korištenja</a>
+        <a href="mailto:info@kti.hr">info@kti.hr</a>
+      </div>
     </div>
-    <p style="margin: 0; font-size: 0.85em;" data-i18n="footer.text">&copy; 2026 | Sva prava zadržana | Svi podaci prikazani na ovoj stranici su informativnog karaktera</p>
+    <div class="footer-bottom">
+      <p data-i18n="footer.text">&copy; 2026 | Sva prava zadržana</p>
+    </div>
   </footer>
 
   <script src="js/translations.js"></script>
@@ -699,5 +697,52 @@
       window.setLanguage = function(lang) { _orig(lang); syncTerms(); };
     })();
   </script>
+
+  <!-- Terms text alignment fix — must load last to override all global CSS -->
+  <style>
+    .terms-wrap, .terms-wrap div, .terms-wrap p, .terms-wrap h2, .terms-wrap ul, .terms-wrap li, .terms-wrap strong {
+      text-align: left !important;
+      max-width: none !important;
+      opacity: 1 !important;
+      animation: none !important;
+    }
+    .terms-wrap {
+      max-width: 800px !important;
+    }
+    .terms-wrap h2 {
+      font-size: 1.15em !important;
+      margin: 40px 0 16px !important;
+      color: #b5ffe1 !important;
+      background: none !important;
+      -webkit-background-clip: unset !important;
+      -webkit-text-fill-color: #b5ffe1 !important;
+      background-clip: unset !important;
+      filter: none !important;
+      letter-spacing: normal !important;
+      line-height: 1.4 !important;
+    }
+    .terms-wrap p {
+      line-height: 1.8 !important;
+      margin: 0 0 14px !important;
+      font-size: 1em !important;
+    }
+    .terms-wrap ul {
+      margin: 0 0 14px 20px !important;
+      padding-left: 20px !important;
+    }
+    .terms-wrap li {
+      margin-bottom: 8px !important;
+      line-height: 1.7 !important;
+    }
+    .terms-wrap .terms-contact {
+      text-align: center !important;
+      margin-top: 50px !important;
+    }
+    @media (max-width: 768px) {
+      .terms-wrap {
+        padding: 30px 15px 40px !important;
+      }
+    }
+  </style>
 </body>
 </html>
