@@ -6,6 +6,7 @@ Allow: /
 
 # Blokiraj privatne/interne direktorije
 Disallow: /318df855l3x/
+Disallow: /m25353/
 Disallow: /app/
 Disallow: /app2/
 Disallow: /subp1/

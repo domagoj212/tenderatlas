@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Metodologija | TenderAtlas</title>
+  <meta name="robots" content="noindex,nofollow">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a1e28;
+      --text: #d0d0d0;
+      --heading: #b5ffe1;
+      --accent: #388697;
+      --card-bg: rgba(56, 134, 151, 0.08);
+      --border: rgba(56, 134, 151, 0.2);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.8;
+      padding: 40px 20px 80px;
+    }
+    .doc {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+    .doc-header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 20px;
+      margin-bottom: 40px;
+    }
+    .doc-header h1 {
+      font-size: 1.6em;
+      color: var(--heading);
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .doc-header .subtitle {
+      font-size: 0.95em;
+      color: var(--accent);
+    }
+    h2 {
+      font-size: 1.2em;
+      color: var(--heading);
+      margin: 40px 0 12px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--border);
+    }
+    h3 {
+      font-size: 1.05em;
+      color: #6bb5e0;
+      margin: 28px 0 8px;
+    }
+    p {
+      margin: 0 0 14px;
+      text-align: left;
+    }
+    ul {
+      margin: 0 0 14px 24px;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 6px;
+    }
+    .note {
+      background: var(--card-bg);
+      border-left: 3px solid var(--accent);
+      padding: 12px 16px;
+      margin: 16px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 0.95em;
+    }
+    @media (max-width: 600px) {
+      body { padding: 24px 14px 60px; }
+      .doc-header h1 { font-size: 1.3em; }
+      h2 { font-size: 1.1em; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="doc">
+
+  <div class="doc-header">
+    <h1>Metodologije izračuna – Market Copilot</h1>
+    <p class="subtitle">TenderAtlas platforma</p>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- CAPEX KPIs                                    -->
+  <!-- ============================================ -->
+  <h2>CAPEX KPIs</h2>
+
+  <p>Key performance indicators koji služe za praćenje zdravlja određenog segmenta tržišta prema kapitalnim izdvajanjima (CAPEX) po određenom sektoru. Osnovni sektori su:</p>
+
+  <ul>
+    <li>Svi građevinski radovi</li>
+    <li>Ceste</li>
+    <li>Željeznica</li>
+    <li>Vodna infrastruktura, uključujući vodoopskrbu, odvodnju, pročišćavanje i gospodarenje vodama</li>
+    <li>Energetika, uključujući sve radove povezane sa energetskom infrastrukturom (LNG, plinovodi, EE mreža, VN/SN kabelska infrastruktura, elektrane)</li>
+    <li>EU financiranje (volumen radova djelomično ili u cijelosti financirani iz EU)</li>
+    <li>Pomorske građevine</li>
+    <li>Projektiranja i studije izvedljivosti</li>
+  </ul>
+
+  <!-- ============================================ -->
+  <!-- Ceste                                         -->
+  <!-- ============================================ -->
+  <h3>Ceste</h3>
+
+  <p>Uključuje praćenje volumena dodijeljenih ugovora tj kapitalnih izdvajanja preko analize dodijeljenih ugovora za najveće javne naručitelje u području izgradnje prometnica i cestovne infrastrukture (HC, HAC, top 10 ŽUC). Podaci se mogu pokazivati na kvartalnoj ili godišnjoj razini.</p>
+
+  <!-- ============================================ -->
+  <!-- Svi građevinski radovi                        -->
+  <!-- ============================================ -->
+  <h3>Svi građevinski radovi</h3>
+
+  <p>Prikazuje ukupan volumen izvođenja građevinskih radova odnosno kapitalna izdvajanja svih javnih naručitelja u RH na ugovore za izvođenje radova.</p>
+
+  <!-- ============================================ -->
+  <!-- Željeznica                                    -->
+  <!-- ============================================ -->
+  <h3>Željeznica</h3>
+
+  <p>Uključuje praćenje volumena dodijeljenih ugovora tj kapitalnih izdvajanja preko analize dodijeljenih ugovora za najveće javne naručitelje u području izgradnje željezničke infrastrukture, bez tramvajskih linija (HŽ INFRA, HŽ PP). Podaci se mogu pokazivati na kvartalnoj ili godišnjoj razini.</p>
+
+  <!-- ============================================ -->
+  <!-- Vode                                          -->
+  <!-- ============================================ -->
+  <h3>Vode</h3>
+
+  <p>Uključuje praćenje volumena dodijeljenih ugovora tj kapitalnih izdvajanja preko analize dodijeljenih ugovora za najveće javne naručitelje u području izgradnje i upravljanja vodne infrastrukture i infrastrukture otpadnih voda (HV, najveća komunalna poduzeća na razini lokalnih samouprava – lokalne komunalne tvrtke, bez tvrtki za gospodarenje otpadom). Podaci se mogu pokazivati na kvartalnoj ili godišnjoj razini.</p>
+
+  <!-- ============================================ -->
+  <!-- Pomorske građevine                            -->
+  <!-- ============================================ -->
+  <h3>Pomorske građevine</h3>
+
+  <p>Uključuje praćenje volumena dodijeljenih ugovora tj kapitalnih izdvajanja preko analize dodijeljenih ugovora najvećih Lučkih Uprava za pomorske lučke uprave, bez lučkih uprava riječnih lučkih građevina i infrastrukture. Podaci se mogu pokazivati na kvartalnoj ili godišnjoj razini.</p>
+
+  <!-- ============================================ -->
+  <!-- Projektiranja i studije                       -->
+  <!-- ============================================ -->
+  <h3>Projektiranja i studije</h3>
+
+  <p>Uključuje praćenje volumena dodijeljenih ugovora tj kapitalnih izdvajanja preko analize dodijeljenih ugovora svih javnih naručitelja za usluge izrade projektne dokumentacije i s tim povezanih studija.</p>
+
+  <!-- ============================================ -->
+  <!-- DODAJ NOVE SEKCIJE OVDJE                      -->
+  <!-- Koristi <h2> za glavne sekcije, <h3> za pod- -->
+  <!-- sekcije, <p> za tekst, <ul><li> za liste      -->
+  <!-- ============================================ -->
+
+</div>
+
+</body>
+</html>
