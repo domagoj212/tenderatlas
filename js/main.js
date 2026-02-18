@@ -593,6 +593,84 @@ function initBackToTop() {
   });
 }
 
+/* ===== SCREENSHOT LIGHTBOX ===== */
+function initScreenshotLightbox() {
+  // Create lightbox element
+  const lightbox = document.createElement('div');
+  lightbox.className = 'screenshot-lightbox';
+  const lbImg = document.createElement('img');
+  lbImg.alt = '';
+  lightbox.appendChild(lbImg);
+  document.body.appendChild(lightbox);
+
+  function closeLightbox() {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+    if (typeof lenis !== 'undefined' && lenis) lenis.start();
+  }
+
+  // Open on screenshot click (skip teaser cards)
+  document.querySelectorAll('.screenshot-img-wrap').forEach(wrap => {
+    wrap.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const card = wrap.closest('.screenshot-card');
+
+      // Teaser card — show toast message instead of lightbox
+      if (card && card.classList.contains('screenshot-teaser')) {
+        showScreenshotToast('Kontaktirajte nas za prikaz svih dostupnih modula');
+        return;
+      }
+
+      const img = wrap.querySelector('img');
+      if (!img) return;
+      lbImg.src = img.src;
+      lbImg.alt = img.alt;
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      if (typeof lenis !== 'undefined' && lenis) lenis.stop();
+    });
+  });
+
+  // Close on overlay click
+  lightbox.addEventListener('click', closeLightbox);
+
+  // Close on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+      closeLightbox();
+    }
+  });
+}
+
+/* ===== SCREENSHOT TOAST ===== */
+function showScreenshotToast(msg) {
+  // Remove existing toast if any
+  const old = document.querySelector('.screenshot-toast');
+  if (old) old.remove();
+
+  const toast = document.createElement('div');
+  toast.className = 'screenshot-toast';
+  toast.textContent = msg;
+  document.body.appendChild(toast);
+
+  // Trigger reflow then show
+  requestAnimationFrame(() => {
+    toast.classList.add('visible');
+  });
+
+  setTimeout(() => {
+    toast.classList.remove('visible');
+    toast.addEventListener('transitionend', () => toast.remove(), { once: true });
+  }, 3000);
+}
+
+// Init lightbox after DOM ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initScreenshotLightbox);
+} else {
+  initScreenshotLightbox();
+}
+
 
 
 
