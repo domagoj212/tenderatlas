@@ -6,6 +6,7 @@ const translations = {
     "nav.pricing": "Moduli i pretplate",
     "nav.contact": "Kontaktiraj nas",
     "nav.home": "Početna",
+    "nav.blog": "Blog",
     "nav.users": "Registrirani korisnici",
     
     // Terms Page
@@ -128,6 +129,7 @@ const translations = {
     "nav.pricing": "Modules & Pricing",
     "nav.contact": "Contact Us",
     "nav.home": "Home",
+    "nav.blog": "Blog",
     "nav.users": "Registered Users",
     
     // Terms Page

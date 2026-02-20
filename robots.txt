@@ -15,6 +15,9 @@ Disallow: /auth43315fa.html
 # Blokiraj duplikat stranice (canonical je opci-uvjeti.html)
 Disallow: /uvjeti.html
 
+# Blokiraj blog predložak
+Disallow: /blog/_PREDLOZAK.html
+
 # Blokiraj medijske datoteke koje ne trebaju indeksiranje
 Disallow: /*.mp4$
 

@@ -1,0 +1,94 @@
+NASLOV: Građevinarstvo u Hrvatskoj — pregled tržišta i kapitalna izdvajanja
+DATUM: 2026-02-20
+KATEGORIJA: Analiza
+OPIS: Analiza građevinskog tržišta u Hrvatskoj — DZS indeksi obujma radova, nove narudžbe, građevinske dozvole i kapitalna izdvajanja po sektorima javne nabave.
+
+---
+
+Građevinarstvo u Hrvatskoj nastavlja pokazivati stabilan rast bez znakova usporavanja. Kombinacija EU fondova, nacionalnih investicijskih programa i privatnog sektora stvara okruženje u kojem gotovo svi ključni pokazatelji ukazuju na ekspanziju — no s bitnim nijansama koje razdvajaju zgradarstvo od infrastrukturnog sektora.
+
+## Indeksi obujma građevinskih radova
+
+Prema podacima Državnog zavoda za statistiku, indeksi obujma građevinskih radova za studeni 2025. iznose **160,0 za zgrade** i **108,1 za ostale građevine**, odnosno **138,8 ukupno** (bazna godina = 100). Vidljivo je kako je obujam građevinskih radova ostvario rast u periodu od 2020.–2023. godine, uz blagu stabilizaciju od 2024.–2026. Rast je primarno ostvaren povećanjem investicija u velike infrastrukturne projekte financirane iz EU fondova, kao i rastom u zgradarstvu tijekom 2025. godine.
+
+[SLIKA: indeksi-obujma-gradevinskih-radova-dzs-2026-02-20T09-52-52.491Z.jpg | Indeksi obujma građevinskih radova — DZS, studeni 2025.]
+
+Ovakav raskorak sugerira da je privatni sektor (stanogradnja, komercijalni objekti) trenutno agresivniji u investiranju od javnog sektora, koji je vezan uz duže cikluse planiranja i provedbe natječaja.
+
+## Vrijednost novih narudžbi
+
+Vrijednost novih narudžbi prema DZS-u u stalnom je porastu od kraja 2022. godine. Kvartalna vrijednost porasla je s **1,18 mlrd EUR** u Q4/2022 na **1,65 mlrd EUR** u Q2/2025 — što predstavlja rast od **gotovo 40%** u manje od tri godine.
+
+[SLIKA: vrijednost-novih-narudzbi-kvartalno-2026-02-20T09-52-58.542Z.jpg | Vrijednost novih narudžbi u građevinarstvu — kvartalni prikaz]
+
+Ovaj kontinuirani rast reflektira kombinaciju faktora: povećanje cijena građevinskih radova, ali i realan rast potražnje — osobito u segmentu stambene izgradnje i javne infrastrukture financirane iz EU fondova. Pipeline novih projekata ostaje robustan i za naredno razdoblje.
+
+## Broj novih građevinskih dozvola
+
+Broj novih građevinskih dozvola u blagom je porastu od konca 2021. godine. Međutim, relativni rast broja dozvola **zaostaje** za rastom obujma radova. Iz tog nesrazmjera može se zaključiti da je dio povećanja obujma nastao zbog **inflatornog efekta** — rasta cijena materijala, energenata i radne snage — a ne isključivo zbog većeg broja novih projekata.
+
+[SLIKA: broj-novih-gradevinskih-dozvola-vrsta-2026-02-20T09-53-06.221Z.jpg | Broj novih građevinskih dozvola po vrsti — DZS]
+
+Struktura dozvola po vrsti građevine dodatno potvrđuje dominaciju zgradarstva. Stambeni objekti čine najveći udio novih dozvola, dok su infrastrukturni projekti manje zastupljeni u broju, ali znatno veći po pojedinačnoj vrijednosti ugovora.
+
+## Kapitalna izdvajanja u javnoj nabavi
+
+Prelazimo s makroekonomskih pokazatelja na konkretne podatke iz sustava javne nabave. Prema analizi dodjeljenih ugovora prema CPV klasifikaciji, kapitalna izdvajanja na građevinske radove stabilna su na razini od **1–1,5 mlrd EUR kvartalno** u posljednjih 5 kvartala. Ova stabilnost ukazuje na to da javni naručitelji održavaju predvidiv tempo investiranja, bez značajnijih oscilacija.
+
+[SLIKA: capex-kpi-gradevinski-radovi-2026-02-20T09-00-00.074Z.jpg | Kapitalna izdvajanja na građevinske radove — kvartalni pregled]
+
+Detaljniji uvid u strukturu tržišta dobivamo promatranjem ključnih pokazatelja prema vrsti radova i naručiteljima.
+
+## Željeznica — najveći pojedinačni segment
+
+Najveća kapitalna izdvajanja za nove projekte u posljednje dvije godine usmjerena su u željeznicu — ukupno **813 mil. EUR** dodijeljenih ugovora. Praktički sva sredstva dolaze od samo dva naručitelja: **HŽ Infrastruktura** i **HŽ Putnički prijevoz**, što ovaj segment čini iznimno koncentriranim.
+
+S obzirom na prirodu željezničkih projekata — mali broj ugovora iznimno visoke vrijednosti — trend dodjele nije stabilan. Fluktuacije ovise o političkim odlukama, dinamici projektne dokumentacije i ciklusima EU financiranja. Pojedini kvartali bilježe dodjele od preko 200 mil. EUR, dok su drugi gotovo bez aktivnosti.
+
+[SLIKA: capex-kpi-zeljeznica-2026-02-20T09-00-10.566Z.jpg | KPI željezničke infrastrukture — dodijeljeni ugovori]
+
+Za tvrtke koje ciljaju na željezničke projekte, ključno je **pravovremeno praćenje** najava i faza pripreme projekata, jer su vremenski prozori za pripremu ponuda često kratki u odnosu na veličinu i složenost ugovora.
+
+## Cestovna infrastruktura — stabilnost i blagi rast
+
+Drugi segment po veličini je cestovna infrastruktura s ukupno **651 mil. EUR** dodijeljenih ugovora (HC, HAC, 10 najvećih ŽUC). Za razliku od željeznice, cestovni segment odlikuje se **znatno stabilnijim trendom** — kvartalna razina iznosi **90–150 mil. EUR** raspodijeljenih na desetak najvećih naručitelja: Hrvatske ceste, HAC, županijske uprave za ceste i veće gradove.
+
+[SLIKA: capex-kpi-ceste-2026-02-20T09-00-07.981Z.jpg | KPI cestovne infrastrukture — kvartalni trend dodjela]
+
+Blagi uzlazni trend rezultat je nastavka radova na brzi cestama, modernizacije državnih i lokalnih cesta te pojačanih ulaganja u sigurnost prometnica. Ovaj segment nudi predvidivost i kontinuitet, što ga čini pogodnim za tvrtke koje grade dugoročnu strategiju sudjelovanja u javnoj nabavi.
+
+## Energetska infrastruktura
+
+Energetska infrastruktura obuhvaća najširi krug naručitelja u infrastrukturnom segmentu. Prema podacima pet najvećih (HEP, HOPS, Plinacro, INA, LNG Hrvatska), ukupna vrijednost dodijeljenih ugovora na građevinske radove iznosi **651 mil. EUR**, uz stabilan kvartalni trend od **90–130 mil. EUR**.
+
+[SLIKA: capex-kpi-energetika-2026-02-20T09-00-16.884Z.jpg | KPI energetske infrastrukture — dodijeljeni ugovori]
+
+Pokretači rasta u ovom segmentu su **energetska tranzicija** (obnovljivi izvori, modernizacija mreže), regulatorni zahtjevi EU-a i strateški projekti poput LNG terminala i interkonekcija. Očekuje se nastavak rasta osobito u segmentu obnovljivih izvora energije i mrežne infrastrukture.
+
+## Vodna infrastruktura — očekivani pad
+
+Sektor vodne infrastrukture bilježi pad dodjela — s oko **100 mil. EUR kvartalno** u Q3/2024 na približno **50 mil. EUR u Q4/2025** (50 najvećih naručitelja u području ViO). Ovo nije iznenađenje: Hrvatska je u proteklim godinama intenzivno investirala u izgradnju aglomeracijskih sustava vodoopskrbe, mreža odvodnje i uređaja za pročišćavanje otpadnih voda (UPOV), financiranih pretežno iz EU kohezijskih fondova.
+
+[SLIKA: capex-kpi-vodoopskrba-odvodnja-gospodarenje-vodnim-resursima-i-otpadnim-vodama-2026-02-20T09-00-13.834Z.jpg | KPI vodne infrastrukture — trend dodjela ugovora]
+
+Kako se taj investicijski ciklus privodi kraju, pad je strukturno očekivan. Novi val investicija mogao bi uslijediti s novim programskim razdobljem EU fondova i potrebom za obnovom starije infrastrukture.
+
+## Pomorske građevine — trend rasta
+
+Pomorske građevine čine rastući segment s ukupnim dodjelama ugovora lučkih uprava obalnih gradova od oko **150 mil. EUR**. Vidljiv je uzlazni trend potaknut potrebama za modernizacijom luka, zaštitom obale od erozije i klimatskih promjena te razvojem nautičke infrastrukture.
+
+[SLIKA: capex-kpi-pomorske-gradevine-2026-02-20T09-00-22.615Z.jpg | KPI pomorskih građevina — dodijeljeni ugovori]
+
+S obzirom na duljinu hrvatske obale i strateški značaj pomorskog prometa, ovaj segment ima potencijal za daljnji rast — osobito u kontekstu razvoja kruzing turizma i potrebe za klimatskom prilagodbom obalnih zona.
+
+## Zaključak
+
+Građevinsko tržište u Hrvatskoj u jasnom je porastu, no **rast nije jednodimenzionalan**:
+
+- Dio rasta je **inflatornog karaktera** — rast cijena materijala i radne snage povećava nominalnu vrijednost radova
+- **Željeznica i energetika** dominiraju infrastrukturnim CAPEX-om, ali s različitom dinamikom — željeznica je volatilna, energetika stabilna
+- **Cestovna infrastruktura** nudi najstabilniji i najprevidljiviji trend za dugoročno planiranje
+- **Vodna infrastruktura** ulazi u pad nakon završetka velikog investicijskog ciklusa
+- **Pomorske građevine** bilježe uzlazni trend s potencijalom daljnjeg rasta
+
+> Tvrtke koje aktivno prate dinamiku kapitalnih izdvajanja po sektorima i pravovremeno identificiraju investicijske cikluse ostvaruju znatnu prednost pri strateškom pozicioniranju na tržištu javne nabave.

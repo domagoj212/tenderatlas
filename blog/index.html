@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="apple-touch-icon" href="../img.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog | TenderAtlas — Javna nabava, analize i trendovi</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/blog.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Lenis Smooth Scroll -->
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+
+  <!-- SEO -->
+  <meta name="description" content="TenderAtlas blog — stručni članci o javnoj nabavi u Hrvatskoj. Analize tržišta, savjeti za natječaje, CAPEX trendovi i novosti iz javne nabave.">
+  <meta name="keywords" content="javna nabava blog, javni natječaji hrvatska, tržište javne nabave, savjeti javna nabava, CAPEX analiza, tender hrvatska">
+  <link rel="canonical" href="https://tenderatlas.hr/blog/">
+  <meta name="robots" content="index,follow">
+
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="TenderAtlas Blog">
+  <meta property="og:title" content="Blog | TenderAtlas — Javna nabava, analize i trendovi">
+  <meta property="og:description" content="Stručni članci o javnoj nabavi u Hrvatskoj. Analize tržišta, savjeti za natječaje i trendovi.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tenderatlas.hr/blog/">
+  <meta property="og:image" content="https://tenderatlas.hr/og-image.png">
+  <meta property="og:locale" content="hr_HR">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- JSON-LD: Blog -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "TenderAtlas Blog",
+    "description": "Stručni članci o javnoj nabavi u Hrvatskoj — analize tržišta, trendovi, savjeti za natječaje",
+    "url": "https://tenderatlas.hr/blog/",
+    "inLanguage": "hr",
+    "publisher": {
+      "@type": "Organization",
+      "name": "TenderAtlas",
+      "url": "https://tenderatlas.hr/",
+      "logo": "https://tenderatlas.hr/img.png"
+    }
+  }
+  </script>
+</head>
+<body class="blog-page">
+
+  <!-- Scroll Progress -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Navigation -->
+  <nav class="fixed-nav">
+    <div class="nav-container">
+      <a href="../" class="nav-logo" aria-label="TenderAtlas">
+        <svg viewBox="0 0 1600 500" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
+          <defs>
+            <linearGradient id="metalBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#4a90c4"/>
+              <stop offset="40%" stop-color="#6bb5e0"/>
+              <stop offset="60%" stop-color="#4a90c4"/>
+              <stop offset="100%" stop-color="#b5ffe1"/>
+            </linearGradient>
+          </defs>
+          <polygon points="300,150 390,200 390,300 300,350 210,300 210,200" fill="none" stroke="url(#metalBlue)" stroke-width="18" stroke-linejoin="round"/>
+          <text x="450" y="305" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="160" fill="url(#metalBlue)" letter-spacing="1">
+            <tspan font-weight="700">Tender</tspan><tspan font-weight="500">Atlas</tspan>
+          </text>
+        </svg>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="navLinks">
+        <a href="../#demo-alata" class="nav-link">Naše rješenje</a>
+        <a href="../#pretplate" class="nav-link">Moduli i pretplate</a>
+        <a href="./" class="nav-link active">Blog</a>
+        <a href="../#kontakt" class="nav-link">Kontaktiraj nas</a>
+      </div>
+      <div class="nav-right">
+        <a href="https://app.tenderatlas.hr" class="user-login-link">
+          <svg class="user-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/>
+            <path d="M6 21C6 17.134 8.686 14 12 14C15.314 14 18 17.134 18 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <span>Prijava</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Blog Hero -->
+  <section class="blog-hero">
+    <div class="container">
+      <h1>TenderAtlas Blog</h1>
+      <p class="blog-hero-sub">Stručni članci, analize tržišta i korisni savjeti iz svijeta javne nabave u Hrvatskoj</p>
+    </div>
+  </section>
+
+  <!-- Blog Posts Grid -->
+  <section class="container blog-section">
+    <div class="blog-grid" id="blogGrid">
+      <!-- Postovi se učitavaju dinamički iz posts.json -->
+      <p id="blogLoading" style="color:var(--text-muted);text-align:center;grid-column:1/-1;">Učitavanje postova...</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <svg viewBox="195 140 1250 225" xmlns="http://www.w3.org/2000/svg" class="footer-logo">
+          <defs>
+            <linearGradient id="metalBlueFooter" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#4a90c4"/>
+              <stop offset="40%" stop-color="#6bb5e0"/>
+              <stop offset="60%" stop-color="#4a90c4"/>
+              <stop offset="100%" stop-color="#b5ffe1"/>
+            </linearGradient>
+          </defs>
+          <polygon points="300,150 390,200 390,300 300,350 210,300 210,200" fill="none" stroke="url(#metalBlueFooter)" stroke-width="18" stroke-linejoin="round"/>
+          <text x="450" y="305" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="160" fill="url(#metalBlueFooter)" letter-spacing="1">
+            <tspan font-weight="700">Tender</tspan><tspan font-weight="500">Atlas</tspan>
+          </text>
+        </svg>
+      </div>
+      <div class="footer-center">
+        <a href="../#demo-alata">Naše rješenje</a>
+        <a href="../#pretplate">Moduli i pretplate</a>
+        <a href="../#kontakt">Kontakt</a>
+        <a href="./">Blog</a>
+        <a href="../opci-uvjeti.html">Opći Uvjeti Korištenja</a>
+        <a href="mailto:info@kti.hr">info@kti.hr</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Sva prava zadržana</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script>
+  (async function loadBlogPosts() {
+    var grid = document.getElementById('blogGrid');
+    if (!grid) return;
+
+    var months = ['siječnja','veljače','ožujka','travnja','svibnja','lipnja',
+                  'srpnja','kolovoza','rujna','listopada','studenoga','prosinca'];
+
+    try {
+      var res = await fetch('posts.json');
+      if (!res.ok) throw new Error('Greška pri učitavanju');
+      var posts = await res.json();
+
+      // Sortiraj po datumu (najnoviji prvi)
+      posts.sort(function(a, b) { return new Date(b.date) - new Date(a.date); });
+
+      grid.innerHTML = '';
+
+      if (posts.length === 0) {
+        grid.innerHTML = '<p style="color:var(--text-muted);text-align:center;grid-column:1/-1;">Nema objavljenih postova.</p>';
+        return;
+      }
+
+      posts.forEach(function(post, i) {
+        var d = new Date(post.date + 'T00:00:00');
+        var dateStr = d.getDate() + '. ' + months[d.getMonth()] + ' ' + d.getFullYear() + '.';
+        var stagger = (i % 5) + 1;
+
+        var article = document.createElement('article');
+        article.className = 'blog-card reveal stagger-' + stagger;
+        article.innerHTML =
+          '<a href="' + post.file + '" class="blog-card-link">' +
+            '<div class="blog-card-img">' +
+              '<img src="' + post.image + '" alt="' + post.title + '" loading="lazy">' +
+            '</div>' +
+            '<div class="blog-card-body">' +
+              '<div class="blog-card-meta">' +
+                '<time datetime="' + post.date + '">' + dateStr + '</time>' +
+                '<span class="blog-tag">' + post.tag + '</span>' +
+              '</div>' +
+              '<h2>' + post.title + '</h2>' +
+              '<p>' + post.description + '</p>' +
+              '<span class="blog-read-more">Pročitaj više →</span>' +
+            '</div>' +
+          '</a>';
+
+        grid.appendChild(article);
+      });
+
+      // Pokreni reveal animaciju za nove elemente
+      if (typeof initScrollReveal === 'function') initScrollReveal();
+
+    } catch (e) {
+      grid.innerHTML = '<p style="color:var(--text-muted);text-align:center;grid-column:1/-1;">Nema objavljenih postova.</p>';
+    }
+  })();
+  </script>
+</body>
+</html>
