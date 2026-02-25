@@ -466,9 +466,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const formMessage = document.getElementById('formMessage');
 
   if (contactForm && formMessage) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       formMessage.textContent = '';
+
+      // Check terms checkbox
+      const termsCheckbox = document.getElementById('termsAccept');
+      if (termsCheckbox && !termsCheckbox.checked) {
+        formMessage.innerText = "Morate prihvatiti uvjete korištenja prije slanja.";
+        formMessage.style.color = '#ff4444';
+        return;
+      }
 
       // Loading state
       const submitBtn = document.getElementById('formSubmitBtn');
@@ -480,6 +488,48 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       const fd = new FormData(contactForm);
+
+      // Remove checkbox from FormData (not needed in email)
+      fd.delete('termsAccept');
+
+      // Get email from form
+      const userEmail = fd.get('email') || 'N/A';
+
+      // Fetch user's IP address
+      let userIP = 'N/A';
+      try {
+        const ipResponse = await fetch('https://api.ipify.org?format=json');
+        const ipData = await ipResponse.json();
+        userIP = ipData.ip || 'N/A';
+      } catch (err) {
+        userIP = 'N/A';
+      }
+
+      // Fetch terms version
+      let termsVersion = 'N/A';
+      try {
+        const termsResponse = await fetch('uvjeti.html');
+        const termsHtml = await termsResponse.text();
+        const parser = new DOMParser();
+        const termsDoc = parser.parseFromString(termsHtml, 'text/html');
+        const versionElement = termsDoc.querySelector('[data-terms-version]');
+        termsVersion = versionElement ? versionElement.getAttribute('data-terms-version') : 'N/A';
+      } catch (err) {
+        termsVersion = 'N/A';
+      }
+
+      // Create timestamp
+      const acceptedAt = new Date().toISOString();
+
+      // Create structured metadata field
+      const metadata = `email=${userEmail}
+accepted_terms=true
+terms_version=${termsVersion}
+accepted_at=${acceptedAt}
+ip_address=${userIP}`;
+
+      // Add metadata as the last field
+      fd.append('terms_metadata', metadata);
 
       fetch('https://formspree.io/f/mkogrgyz', {
         method: 'POST',
@@ -494,6 +544,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         if (response.ok) {
           formMessage.innerText = "Hvala, vaša poruka je poslana! Kontaktirati ćemo Vas povratno";
+          formMessage.style.color = '#4a90c4';
           contactForm.reset();
           toggleCompanyField();
         } else {
@@ -503,6 +554,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (json && json.error) errText = json.error;
           } catch (_) {}
           formMessage.innerText = errText;
+          formMessage.style.color = '#ff4444';
         }
       })
       .catch(() => {
@@ -512,6 +564,7 @@ document.addEventListener('DOMContentLoaded', () => {
           submitBtn.style.opacity = '1';
         }
         formMessage.innerText = "Ups! Došlo je do greške, pokušajte ponovno.";
+        formMessage.style.color = '#ff4444';
       });
     });
   }

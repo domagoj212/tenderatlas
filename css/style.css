@@ -1782,6 +1782,33 @@ footer.site-footer::after {
   margin: 0;
 }
 
+.contact-form-section input[type="checkbox"] {
+  width: 18px !important;
+  height: 18px !important;
+  min-width: 18px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  flex-shrink: 0 !important;
+  display: inline-block !important;
+  cursor: pointer;
+}
+
+.contact-form-section label.checkbox-label {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 10px !important;
+  cursor: pointer !important;
+  font-size: 0.9em !important;
+  line-height: 1.6 !important;
+  font-weight: 400 !important;
+}
+
+.contact-form-section label.checkbox-label span {
+  flex: 1;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
 .contact-form-section input:focus,
 .contact-form-section select:focus,
 .contact-form-section textarea:focus {

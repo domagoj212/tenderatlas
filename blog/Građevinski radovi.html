@@ -1,0 +1,185 @@
+<!--
+  ╔═══════════════════════════════════════════════════════════════╗
+  ║  TENDERATLAS BLOG — PREDLOŽAK                                ║
+  ║                                                               ║
+  ║  KORACI:                                                      ║
+  ║  1. Kopiraj ovaj fajl i preimenuj (npr. moj-post.html)       ║
+  ║  2. Popuni SAMO dio između ✏️ oznaka ispod                    ║
+  ║  3. Dodaj post u /blog/posts.json                             ║
+  ║  4. Slike stavi u /blog/img/ ili /scr/                        ║
+  ║                                                               ║
+  ║  PLACEHOLDERI ZA SLIKE:                                       ║
+  ║  Hero:   <img src="img/TVOJA-SLIKA.png">                     ║
+  ║  U tekstu: koristi blok ispod                                 ║
+  ║                                                               ║
+  ║  <figure class="blog-figure">                                 ║
+  ║    <img src="img/SLIKA.png" alt="Opis">                      ║
+  ║    <figcaption>Tekst ispod slike</figcaption>                 ║
+  ║  </figure>                                                    ║
+  ╚═══════════════════════════════════════════════════════════════╝
+-->
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="apple-touch-icon" href="../img.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/blog.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- ✏️ POPUNI OVE 4 STVARI ↓ -->
+  <title>Kapitalna izdvajanja na građevinarstvo u RH | TenderAtlas Blog</title>
+  <meta name="description" content="KRATKI OPIS ZA GOOGLE (150-160 znakova)">
+  <link rel="canonical" href="https://tenderatlas.hr/blog/IME-FAJLA.html">
+  <meta property="article:published_time" content="2026-01-01">
+  <!-- ✏️ KRAJ SEO DIJELA ↑ -->
+
+  <meta name="robots" content="index,follow">
+  <meta property="og:site_name" content="TenderAtlas Blog">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="hr_HR">
+  <meta property="article:author" content="TenderAtlas">
+  <meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Navigation (ne diraj) -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="../" class="nav-logo">
+        <svg viewBox="195 140 1250 225" xmlns="http://www.w3.org/2000/svg">
+          <defs><linearGradient id="metalBlue" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#4a90c4"/><stop offset="40%" stop-color="#6bb5e0"/><stop offset="60%" stop-color="#4a90c4"/><stop offset="100%" stop-color="#b5ffe1"/></linearGradient></defs>
+          <polygon points="300,150 390,200 390,300 300,350 210,300 210,200" fill="none" stroke="url(#metalBlue)" stroke-width="18" stroke-linejoin="round"/>
+          <text x="450" y="305" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="160" fill="url(#metalBlue)" letter-spacing="1"><tspan font-weight="700">Tender</tspan><tspan font-weight="500">Atlas</tspan></text>
+        </svg>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="nav-links" id="navLinks">
+        <a href="../" class="nav-link">Početna</a>
+        <a href="../#demo-alata" class="nav-link">Naše rješenje</a>
+        <a href="../#pretplate" class="nav-link">Moduli i pretplate</a>
+        <a href="./" class="nav-link active">Blog</a>
+      </div>
+      <div class="nav-right">
+        <a href="https://app.tenderatlas.hr" class="user-login-link">
+          <svg class="user-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/><path d="M6 21C6 17.134 8.686 14 12 14C15.314 14 18 17.134 18 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <span>Prijava</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ═══════════════════════════════════════════════════════════
+       ✏️ TVOJ SADRŽAJ POČINJE OVDJE — MIJENJAJ SAMO OVO DOLJE ✏️
+       ═══════════════════════════════════════════════════════════ -->
+  <article class="blog-post">
+
+    <!-- HERO SLIKA — zamijeni src, ili obriši cijeli <div> ako nemaš sliku -->
+    <div class="blog-post-hero">
+      <img src="img/HERO-SLIKA.png" alt="Opis hero slike">
+    </div>
+
+    <div class="blog-post-wrap">
+
+      <!-- Breadcrumb — promijeni samo zadnji <span> -->
+      <nav class="blog-breadcrumb" aria-label="Breadcrumb">
+        <a href="../">Početna</a> <span>/</span>
+        <a href="./">Blog</a> <span>/</span>
+        <span>Kratki naslov</span>
+      </nav>
+
+      <!-- Zaglavlje -->
+      <header class="blog-post-header">
+        <div class="blog-card-meta">
+          <time datetime="2026-01-01">1. siječnja 2026.</time>
+          <span class="blog-tag">Kategorija</span>
+        </div>
+        <h1>Naslov tvog blog posta</h1>
+      </header>
+
+      <!-- SADRŽAJ — piši normalno koristeći h2, h3, p, ul, ol, blockquote -->
+      <div class="blog-content">
+
+        <p>Uvodni paragraf — o čemu je članak.</p>
+
+        <h2>Podnaslov</h2>
+        <p>Tekst sekcije. Koristi <strong>bold</strong> i <a href="#">linkove</a>.</p>
+
+        <!-- 🖼️ SLIKA U TEKSTU — kopiraj ovaj blok gdje god trebaš sliku -->
+        <figure class="blog-figure">
+          <img src="img/SLIKA-1.png" alt="Opis slike" loading="lazy">
+          <figcaption>Tekst ispod slike (opcionalno — obriši ako ne treba)</figcaption>
+        </figure>
+
+        <h2>Još jedan podnaslov</h2>
+        <p>Više teksta...</p>
+
+        <ul>
+          <li>Točka 1</li>
+          <li>Točka 2</li>
+          <li>Točka 3</li>
+        </ul>
+
+        <blockquote>
+          Citirani tekst ili istaknuti podatak.
+        </blockquote>
+
+        <!-- 🖼️ DRUGA SLIKA -->
+        <figure class="blog-figure">
+          <img src="img/SLIKA-2.png" alt="Opis" loading="lazy">
+          <figcaption>Opis ispod slike</figcaption>
+        </figure>
+
+        <h2>Zaključak</h2>
+        <p>Završni paragraf.</p>
+
+      </div>
+      <!-- ═══════════════════════════════════════════════════════
+           ✏️ TVOJ SADRŽAJ ZAVRŠAVA OVDJE ✏️
+           ═══════════════════════════════════════════════════════ -->
+
+      <!-- CTA (opcionalno — obriši ako ne trebaš) -->
+      <div class="blog-cta">
+        <h3>Želite dublje analize javne nabave?</h3>
+        <p>Isprobajte TenderAtlas platformu besplatno.</p>
+        <a href="../#kontakt" class="blog-cta-btn">Isprobaj besplatno</a>
+      </div>
+
+      <div class="blog-back">
+        <a href="./">← Svi članci</a>
+      </div>
+    </div>
+  </article>
+
+
+  <!-- Footer (ne diraj) -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <svg viewBox="195 140 1250 225" xmlns="http://www.w3.org/2000/svg" class="footer-logo">
+          <defs><linearGradient id="metalBlueFooter" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#4a90c4"/><stop offset="40%" stop-color="#6bb5e0"/><stop offset="60%" stop-color="#4a90c4"/><stop offset="100%" stop-color="#b5ffe1"/></linearGradient></defs>
+          <polygon points="300,150 390,200 390,300 300,350 210,300 210,200" fill="none" stroke="url(#metalBlueFooter)" stroke-width="18" stroke-linejoin="round"/>
+          <text x="450" y="305" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="160" fill="url(#metalBlueFooter)" letter-spacing="1"><tspan font-weight="700">Tender</tspan><tspan font-weight="500">Atlas</tspan></text>
+        </svg>
+      </div>
+      <div class="footer-center">
+        <a href="../#demo-alata">Naše rješenje</a>
+        <a href="../#pretplate">Moduli i pretplate</a>
+        <a href="../#kontakt">Kontakt</a>
+        <a href="./">Blog</a>
+        <a href="../opci-uvjeti.html">Opći Uvjeti Korištenja</a>
+        <a href="mailto:info@kti.hr">info@kti.hr</a>
+      </div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2026 Sva prava zadržana</p></div>
+  </footer>
+
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
