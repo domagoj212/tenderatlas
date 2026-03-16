@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="hr">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S5BVTGM0R8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-S5BVTGM0R8');
+  </script>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="apple-touch-icon" href="img.png">
@@ -206,7 +214,7 @@
   <section class="container">
     <div class="section-divider reveal"></div>
     <h2 class="reveal" data-i18n="bi.title">Kompletno i sustavno rješenje za javnu nabavu</h2>
-    <p class="section-subtitle reveal">Sve što trebate za praćenje, analizu i uspjeh u javnoj nabavi — na jednom mjestu.</p>
+    <p class="section-subtitle reveal" data-i18n="bi.subtitle">Sve što trebate za praćenje, analizu i uspjeh u javnoj nabavi — na jednom mjestu.</p>
 
     <div class="card-grid">
       <div class="glass-card reveal stagger-1">
@@ -216,8 +224,8 @@
             <path d="M18 17l-5-5-3 3-4-4" stroke="var(--aquamarine)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </div>
-        <h4 class="card-title">Business Intelligence</h4>
-        <p class="card-desc">Pristupite BI izvještajima specijaliziranima za vašu industriju ili cjelokupnu javnu nabavu.</p>
+        <h4 class="card-title" data-i18n="cards.bi.title">Business Intelligence</h4>
+        <p class="card-desc" data-i18n="cards.bi.desc">Pristupite BI izvještajima specijaliziranima za vašu industriju ili cjelokupnu javnu nabavu.</p>
       </div>
 
       <div class="glass-card reveal stagger-2">
@@ -226,8 +234,8 @@
             <path d="M3 8L10.89 13.26C11.2187 13.4793 11.6049 13.5963 12 13.5963C12.3951 13.5963 12.7813 13.4793 13.11 13.26L21 8M5 19H19C19.5304 19 20.0391 18.7893 20.4142 18.4142C20.7893 18.0391 21 17.5304 21 17V7C21 6.46957 20.7893 5.96086 20.4142 5.58579C20.0391 5.21071 19.5304 5 19 5H5C4.46957 5 3.96086 5.21071 3.58579 5.58579C3.21071 5.96086 3 6.46957 3 7V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19Z" stroke="var(--aquamarine)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </div>
-        <h4 class="card-title">Automatske obavijesti</h4>
-        <p class="card-desc">Primajte obavijesti o novim natječajima i tržišnim promjenama u vašoj industriji.</p>
+        <h4 class="card-title" data-i18n="cards.alerts.title">Automatske obavijesti</h4>
+        <p class="card-desc" data-i18n="cards.alerts.desc">Primajte obavijesti o novim natječajima i tržišnim promjenama u vašoj industriji.</p>
       </div>
 
       <div class="glass-card reveal stagger-3">
@@ -237,8 +245,8 @@
             <path d="M8 12l3 3 5-6" stroke="var(--aquamarine)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </div>
-        <h4 class="card-title">AI analiza dokumentacije</h4>
-        <p class="card-desc">Steknite dublje uvide u natječajnu dokumentaciju uz pomoć AI modela.</p>
+        <h4 class="card-title" data-i18n="cards.ai.title">AI analiza dokumentacije</h4>
+        <p class="card-desc" data-i18n="cards.ai.desc">Steknite dublje uvide u natječajnu dokumentaciju uz pomoć AI modela.</p>
       </div>
     </div>
   </section>
@@ -247,31 +255,36 @@
   <section id="demo-alata" class="container">
     <div class="section-divider reveal"></div>
     <h2 class="reveal" data-i18n="demo.title">Naše rješenje</h2>
-    <p class="section-subtitle reveal">Pregled platforme i specijaliziranih modula za analitiku javne nabave</p>
+    <p class="section-subtitle reveal" data-i18n="demo.sectionSubtitle">Pregled web alata kroz različite module</p>
 
     <div class="screenshots-grid">
       <div class="screenshot-card reveal stagger-1">
         <div class="screenshot-img-wrap">
           <img src="scr/capex.png" alt="CAPEX analitika – pregled kapitalnih izdvajanja po sektorima" loading="lazy">
         </div>
-        <h4>CAPEX analitika</h4>
+        <h4 data-i18n="scr.capex">CAPEX analitika</h4>
       </div>
 
       <div class="screenshot-card reveal stagger-2">
         <div class="screenshot-img-wrap">
           <img src="scr/dodug1.png" alt="Dodijeljeni ugovori – pregled i analiza ugovora javne nabave" loading="lazy">
         </div>
-        <h4>Dodijeljeni ugovori</h4>
+        <h4 data-i18n="scr.contracts">Dodijeljeni ugovori</h4>
       </div>
 
       <div class="screenshot-card screenshot-teaser reveal stagger-3">
         <div class="screenshot-img-wrap">
           <img src="scr/many%20more.png" alt="Dodatni moduli platforme" loading="lazy">
           <div class="teaser-overlay">
-            <span>Još mnogo različitih modula</span>
+            <span data-i18n="scr.more.overlay">Još mnogo različitih modula</span>
           </div>
         </div>
-        <h4>I mnogo više...</h4>
+        <ul class="more-list">
+          <li data-i18n="scr.more.item1">Registri i analize svih ponuda</li>
+          <li data-i18n="scr.more.item2">Registri planova nabave</li>
+          <li data-i18n="scr.more.item3">Analize naručitelja i gospodarskih tvrtki</li>
+          <li data-i18n="scr.more.item4">Analize tržišta</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -280,23 +293,23 @@
   <section class="container">
     <div class="section-divider reveal"></div>
     <h2 class="reveal" data-i18n="steps.title">Kako funkcionira?</h2>
-    <p class="section-subtitle reveal">Tri jednostavna koraka do potpunog pregleda tržišta javne nabave</p>
+    <p class="section-subtitle reveal" data-i18n="steps.subtitle">Tri jednostavna koraka do potpunog pregleda tržišta javne nabave</p>
 
     <div class="steps-container">
       <div class="step-item reveal stagger-1">
         <div class="step-number">1</div>
-        <h4>Registrirajte se</h4>
-        <p>Kreirajte besplatni probni račun i odaberite industriju koja vas zanima</p>
+        <h4 data-i18n="steps.1.title">Registrirajte se</h4>
+        <p data-i18n="steps.1.desc">Kreirajte besplatni probni račun i odaberite industriju koja vas zanima</p>
       </div>
       <div class="step-item reveal stagger-2">
         <div class="step-number">2</div>
-        <h4>Istražite podatke</h4>
-        <p>Pristupite vizualizacijama, analitikama i izvještajima javne nabave</p>
+        <h4 data-i18n="steps.2.title">Istražite podatke</h4>
+        <p data-i18n="steps.2.desc">Pristupite vizualizacijama, analitikama i izvještajima javne nabave</p>
       </div>
       <div class="step-item reveal stagger-3">
         <div class="step-number">3</div>
-        <h4>Donosite odluke</h4>
-        <p>Koristite uvide za strateško planiranje i sudjelovanje na natječajima</p>
+        <h4 data-i18n="steps.3.title">Donosite odluke</h4>
+        <p data-i18n="steps.3.desc">Koristite uvide za strateško planiranje i sudjelovanje na natječajima</p>
       </div>
     </div>
   </section>
@@ -327,18 +340,18 @@
     <!-- Industries List -->
     <div class="industries-section reveal" style="margin-bottom: 50px;">
       <div class="industries-list">
-        <span class="industry-item">Građevinarstvo</span>
-        <span class="industry-item">Medicinska industrija i industrija lijekova</span>
-        <span class="industry-item">Elektroinstalacije i elektromaterijali</span>
-        <span class="industry-item">Geodezija i geoinformatika</span>
-        <span class="industry-item">Goriva maziva i rude</span>
-        <span class="industry-item">Inženjerske i savjetodavne usluge u građevinarstvu</span>
-        <span class="industry-item">Strojarstvo i strojarska oprema</span>
-        <span class="industry-item">Logistika i transport</span>
-        <span class="industry-item">Odvjetničke i pravne usluge</span>
-        <span class="industry-item">Prehrambena industrija</span>
-        <span class="industry-item">Solarni i fotonaponski sustavi</span>
-        <span class="industry-item">Informatička tehnologija, software i hardware</span>
+        <span class="industry-item" data-i18n="ind.construction">Građevinarstvo</span>
+        <span class="industry-item" data-i18n="ind.medical">Medicinska industrija i industrija lijekova</span>
+        <span class="industry-item" data-i18n="ind.electrical">Elektroinstalacije i elektromaterijali</span>
+        <span class="industry-item" data-i18n="ind.geodesy">Geodezija i geoinformatika</span>
+        <span class="industry-item" data-i18n="ind.fuels">Goriva maziva i rude</span>
+        <span class="industry-item" data-i18n="ind.engineering">Inženjerske i savjetodavne usluge u građevinarstvu</span>
+        <span class="industry-item" data-i18n="ind.machinery">Strojarstvo i strojarska oprema</span>
+        <span class="industry-item" data-i18n="ind.logistics">Logistika i transport</span>
+        <span class="industry-item" data-i18n="ind.legal">Odvjetničke i pravne usluge</span>
+        <span class="industry-item" data-i18n="ind.food">Prehrambena industrija</span>
+        <span class="industry-item" data-i18n="ind.solar">Solarni i fotonaponski sustavi</span>
+        <span class="industry-item" data-i18n="ind.it">Informatička tehnologija, software i hardware</span>
       </div>
     </div>
   </section>
@@ -348,19 +361,19 @@
     <div class="trust-bar reveal">
       <div class="trust-item">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2"/></svg>
-        <span>Sigurni podaci</span>
+        <span data-i18n="trust.data">Sigurni podaci</span>
       </div>
       <div class="trust-item">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M22 11.08V12a10 10 0 11-5.93-9.14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M22 4L12 14.01l-3-3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <span>GDPR sukladnost</span>
+        <span data-i18n="trust.gdpr">GDPR sukladnost</span>
       </div>
       <div class="trust-item">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-        <span>Real-time ažuriranje</span>
+        <span data-i18n="trust.realtime">Real-time ažuriranje</span>
       </div>
       <div class="trust-item">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="currentColor" stroke-width="2"/><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="currentColor" stroke-width="2"/></svg>
-        <span>Podrška za timove</span>
+        <span data-i18n="trust.teams">Podrška za timove</span>
       </div>
     </div>
   </section>
@@ -439,7 +452,7 @@
       <div class="form-group" style="margin-top: 20px;">
         <label class="checkbox-label">
           <input type="checkbox" id="termsAccept" name="termsAccept" value="accepted" required>
-          <span>
+          <span data-i18n="form.termsText" data-i18n-html>
             Potvrđujem da sam pročitao/pročitala i prihvaćam <a href="uvjeti.html" target="_blank" style="color: #4a90c4; text-decoration: underline;">uvjete korištenja</a> te izjavljujem da su svi navedeni podaci točni i istiniti.*
           </span>
         </label>

@@ -117,7 +117,86 @@ const translations = {
     "modal.desc": "Rezervirajte 15-minutnu demonstraciju i saznajte kako možete povećati stopu uspješnosti na natječajima za 40%+",
     "modal.cta": "Da, želim demo",
     "modal.cancel": "Možda kasnije",
+    "modal.btnYes": "Da, želim demo",
+    "modal.btnLater": "Možda kasnije",
     
+    // Stats
+    "stats.tenders": "Natječaja u bazi",
+    "stats.industries": "Industrija",
+    "stats.monitoring": "Praćenje natječaja",
+    "stats.data": "Podaci javne nabave RH",
+
+    // Feature Cards
+    "cards.bi.title": "Business Intelligence",
+    "cards.bi.desc": "Pristupite BI izvještajima specijaliziranima za vašu industriju ili cjelokupnu javnu nabavu.",
+    "cards.alerts.title": "Automatske obavijesti",
+    "cards.alerts.desc": "Primajte obavijesti o novim natječajima i tržišnim promjenama u vašoj industriji.",
+    "cards.ai.title": "AI analiza dokumentacije",
+    "cards.ai.desc": "Steknite dublje uvide u natječajnu dokumentaciju uz pomoć AI modela.",
+
+    // Screenshots
+    "scr.capex": "CAPEX analitika",
+    "scr.contracts": "Dodijeljeni ugovori",
+    "scr.more.overlay": "Još mnogo različitih modula",
+    "scr.more.item1": "Registri i analize svih ponuda",
+    "scr.more.item2": "Registri planova nabave",
+    "scr.more.item3": "Analize naručitelja i gospodarskih tvrtki",
+    "scr.more.item4": "Analize tržišta",
+
+    // How It Works
+    "steps.title": "Kako funkcionira?",
+    "steps.subtitle": "Tri jednostavna koraka do potpunog pregleda tržišta javne nabave",
+    "steps.1.title": "Registrirajte se",
+    "steps.1.desc": "Kreirajte besplatni probni račun i odaberite industriju koja vas zanima",
+    "steps.2.title": "Istražite podatke",
+    "steps.2.desc": "Pristupite vizualizacijama, analitikama i izvještajima javne nabave",
+    "steps.3.title": "Donosite odluke",
+    "steps.3.desc": "Koristite uvide za strateško planiranje i sudjelovanje na natječajima",
+
+    // Trust Bar
+    "trust.data": "Sigurni podaci",
+    "trust.gdpr": "GDPR sukladnost",
+    "trust.realtime": "Real-time ažuriranje",
+    "trust.teams": "Podrška za timove",
+
+    // Contact section
+    "contact.emailIntro": "Ili nas kontaktirajte direktno putem emaila:",
+
+    // Form extra keys
+    "form.fullName": "Ime i prezime*",
+    "form.fullNamePh": "Vaše ime i prezime",
+    "form.emailPh": "vas@tvrtka.hr",
+    "form.phonePh": "+385 ...",
+    "form.personTypeSelect": "Odaberi",
+    "form.personTypeLegal": "Pravna osoba (tvrtka)",
+    "form.personTypePrivate": "Privatna osoba",
+    "form.companyName": "Naziv tvrtke*",
+    "form.companyNamePh": "Naziv vaše tvrtke",
+    "form.companySizeSelect": "Odaberi",
+    "form.industryPh": "npr. Građevinarstvo, Medicina, IT...",
+    "form.terms": "Potvrđujem da sam pročitao/pročitala i prihvaćam",
+    "form.termsLink": "uvjete korištenja",
+    "form.termsEnd": "te izjavljujem da su svi navedeni podaci točni i istiniti.*",
+    "form.termsText": "Potvrđujem da sam pročitao/pročitala i prihvaćam <a href=\"uvjeti.html\" target=\"_blank\" style=\"color: #4a90c4; text-decoration: underline;\">uvjete korištenja</a> te izjavljujem da su svi navedeni podaci točni i istiniti.*",
+
+    // Section subtitle (hardcoded)
+    "bi.subtitle": "Sve što trebate za praćenje, analizu i uspjeh u javnoj nabavi — na jednom mjestu.",
+    "demo.sectionSubtitle": "Pregled web alata kroz različite module",
+
+    // Industries
+    "ind.construction": "Građevinarstvo",
+    "ind.medical": "Medicinska industrija i industrija lijekova",
+    "ind.electrical": "Elektroinstalacije i elektromaterijali",
+    "ind.geodesy": "Geodezija i geoinformatika",
+    "ind.fuels": "Goriva maziva i rude",
+    "ind.engineering": "Inženjerske i savjetodavne usluge u građevinarstvu",
+    "ind.machinery": "Strojarstvo i strojarska oprema",
+    "ind.logistics": "Logistika i transport",
+    "ind.legal": "Odvjetničke i pravne usluge",
+    "ind.food": "Prehrambena industrija",
+    "ind.solar": "Solarni i fotonaponski sustavi",
+    "ind.it": "Informatička tehnologija, software i hardware",
+
     // Footer
     "footer.contact": "Kontakt",
     "footer.terms": "Opći Uvjeti Korištenja",
@@ -234,7 +313,86 @@ const translations = {
     "modal.desc": "Book a 15-minute demo and learn how you can increase tender success rate by 40%+",
     "modal.cta": "Yes, I Want Demo",
     "modal.cancel": "Maybe Later",
+    "modal.btnYes": "Yes, I Want a Demo",
+    "modal.btnLater": "Maybe Later",
     
+    // Stats
+    "stats.tenders": "Tenders in database",
+    "stats.industries": "Industries",
+    "stats.monitoring": "Tender monitoring",
+    "stats.data": "Croatian public procurement data",
+
+    // Feature Cards
+    "cards.bi.title": "Business Intelligence",
+    "cards.bi.desc": "Access BI reports specialized for your industry or the entire public procurement market.",
+    "cards.alerts.title": "Automated Alerts",
+    "cards.alerts.desc": "Receive notifications about new tenders and market changes in your industry.",
+    "cards.ai.title": "AI Document Analysis",
+    "cards.ai.desc": "Gain deeper insights into tender documentation with the help of AI models.",
+
+    // Screenshots
+    "scr.capex": "CAPEX Analytics",
+    "scr.contracts": "Awarded Contracts",
+    "scr.more.overlay": "Many more modules available",
+    "scr.more.item1": "Registries and analyses of all tenders",
+    "scr.more.item2": "Procurement plan registries",
+    "scr.more.item3": "Analyses of contracting authorities and economic operators",
+    "scr.more.item4": "Market analyses",
+
+    // How It Works
+    "steps.title": "How Does It Work?",
+    "steps.subtitle": "Three simple steps to a complete overview of the public procurement market",
+    "steps.1.title": "Register",
+    "steps.1.desc": "Create a free trial account and select the industry you are interested in",
+    "steps.2.title": "Explore Data",
+    "steps.2.desc": "Access visualizations, analytics, and public procurement reports",
+    "steps.3.title": "Make Decisions",
+    "steps.3.desc": "Use insights for strategic planning and participation in tenders",
+
+    // Trust Bar
+    "trust.data": "Secure Data",
+    "trust.gdpr": "GDPR Compliant",
+    "trust.realtime": "Real-time Updates",
+    "trust.teams": "Team Support",
+
+    // Contact section
+    "contact.emailIntro": "Or contact us directly via email:",
+
+    // Form extra keys
+    "form.fullName": "Full Name*",
+    "form.fullNamePh": "Your full name",
+    "form.emailPh": "you@company.com",
+    "form.phonePh": "+385 ...",
+    "form.personTypeSelect": "Select",
+    "form.personTypeLegal": "Legal Entity (Company)",
+    "form.personTypePrivate": "Private Individual",
+    "form.companyName": "Company Name*",
+    "form.companyNamePh": "Your company name",
+    "form.companySizeSelect": "Select",
+    "form.industryPh": "e.g. Construction, Healthcare, IT...",
+    "form.terms": "I confirm that I have read and accept the",
+    "form.termsLink": "terms of use",
+    "form.termsEnd": "and declare that all provided information is accurate and truthful.*",
+    "form.termsText": "I confirm that I have read and accept the <a href=\"uvjeti.html\" target=\"_blank\" style=\"color: #4a90c4; text-decoration: underline;\">terms of use</a> and declare that all provided information is accurate and truthful.*",
+
+    // Section subtitles
+    "bi.subtitle": "Everything you need to monitor, analyze, and succeed in public procurement — in one place.",
+    "demo.sectionSubtitle": "Overview of the web tool through various modules",
+
+    // Industries
+    "ind.construction": "Construction",
+    "ind.medical": "Medical Industry & Pharmaceuticals",
+    "ind.electrical": "Electrical Installations & Materials",
+    "ind.geodesy": "Geodesy & Geoinformatics",
+    "ind.fuels": "Fuels, Lubricants & Minerals",
+    "ind.engineering": "Engineering & Construction Consulting Services",
+    "ind.machinery": "Mechanical Engineering & Equipment",
+    "ind.logistics": "Logistics & Transport",
+    "ind.legal": "Legal & Attorney Services",
+    "ind.food": "Food Industry",
+    "ind.solar": "Solar & Photovoltaic Systems",
+    "ind.it": "Information Technology, Software & Hardware",
+
     // Footer
     "footer.contact": "Contact",
     "footer.terms": "Terms of Use",
